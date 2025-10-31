@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* Global font (use the imported Poppins) */
+body {
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* Utility: hide scrollbars while preserving scrollability */
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Ensure images scale properly on all viewports */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Smooth touch scrolling for horizontal nav lists */
+.nav-container {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Product hero image wrapper: mobile-first responsive heights (Tailwind classes used in markup too) */
+.product-hero {
+  width: 100%;
+}
+
+/* Overlay helper (when JS toggles it) */
+#menu-overlay.hidden {
+  display: none;
+}
+
+/* Minor accessible focus styles */
+a:focus {
+  outline: 3px solid rgba(59,130,246,0.4);
+  outline-offset: 2px;
+}
+
+/* Product price and CTA section */
+.product-price-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+@media (min-width: 640px) {
+  .product-price {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+.buy-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #2563eb;
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.2s;
+}
+
+.buy-button:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.buy-button:active {
+  transform: translateY(0);
+}
+
+/* Product gallery */
+.thumbnail-container {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.thumbnail {
+  width: 5rem;
+  height: 5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  padding: 0.25rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.thumbnail:hover {
+  border-color: #60a5fa;
+}
+
+.thumbnail.active {
+  border-color: #2563eb;
+}
+
+/* Tab controls */
+.tab-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.tab-button {
+  padding: 0.5rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+@media (min-width: 768px) {
+  .tab-button {
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
+  }
+}
+
+.tab-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
