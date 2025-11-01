@@ -1,0 +1,24 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+
+# Editor dirs
+.vscode/
+.idea/
+
+# OS generated files
+*.swp
+
+# Generated
+dist/
+build/

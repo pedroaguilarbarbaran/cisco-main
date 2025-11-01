@@ -17,7 +17,8 @@
   <!-- css  -->
   <link rel="stylesheet" href="./css/style.css" />
   <!-- carga del navbar -->
-  <script src="./js/nav.js"></script>
+  <script src="./js/nav.js" defer></script>
+  <script src="./js/change_tabs.js" defer></script>
 
   <!-- titulo de la pagina -->
   <title>
@@ -36,7 +37,8 @@
         <a href="https://www.ds3comunicaciones.com/cisco/catalys_9200l.html"
           class="nav-item flex items-center p-1.5 rounded-lg min-w-fit flex-shrink-0 space-x-1.5">
           <div class="icon-container h-6 w-6 flex items-center justify-center">
-            <img src="./icons/Switch Catalyst.ico" class="nav-icon max-h-full max-w-full" alt="Switch Catalyst" />
+            <!-- Use a reliable product image as icon to avoid issues with .ico filenames containing spaces -->
+            <img src="./img/switch-cisco-catalyst-9200l-24-puertos.jpg" class="nav-icon max-h-full max-w-full object-contain" alt="Switch Catalyst" />
           </div>
           <span class="text-xs font-medium text-gray-600 whitespace-nowrap">Switch Catalyst</span>
         </a>
@@ -302,6 +304,7 @@
                     <div class="w-full h-64 sm:h-80 md:h-[400px] flex items-center justify-center overflow-hidden product-hero">
                       <img id="img_main"
                         src="https://web.netperu100.com/cisco/catalyst/images/C9200L-24T-4G-E_front.jpg"
+                        loading="lazy"
                         alt="Switch Catalyst 2960" class="max-h-full max-w-full object-contain cursor-pointer"
                         onclick="viewImage(this.src)" />
                     </div>
